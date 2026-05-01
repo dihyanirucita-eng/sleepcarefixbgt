@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SleepCare - Sleep Deprivation Awareness</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-moon"></i> Sleep<span>Care</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#effects">Effects</a></li>
+        <li><a href="#tips">Tips</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="home" class="page">
+      <div class="hero container">
+        <div class="text slide-left">
+          <h1>Tidur Cukup Itu <span>Penting</span></h1>
+          <p>
+            Kurang tidur bisa mempengaruhi kesehatan fisik, mental,
+            dan produktivitas sehari-hari.
+          </p>
+          <a href="#tips" class="btn">Read Tips</a>
+        </div>
+
+        <div class="card slide-right">
+          <div class="sleep good">
+            😴
+            <p>Cukup Tidur<br><b>7–9 jam</b></p>
+          </div>
+          <div class="vs">VS</div>
+          <div class="sleep bad">
+            😵
+            <p>Kurang Tidur<br><b>&lt; 6 jam</b></p>
+          </div>
+        </div>
+      </div>
+
+      <section class="about container">
+        <div class="about-text slide-left">
+          <h2>Apa itu Sleep Deprivation?</h2>
+          <p>
+            Sleep deprivation adalah kondisi ketika seseorang tidak mendapatkan tidur yang cukup.
+            Dampaknya bisa berupa kelelahan, sulit fokus, hingga gangguan kesehatan.
+          </p>
+        </div>
+        <div class="about-img slide-right">🌙</div>
+      </section>
+
+      <section class="stats container slide-up">
+        <h2>Kebutuhan Tidur Ideal</h2>
+        <div class="chart">
+
+          <div class="bar-item">
+            <span class="bar-label">7–8 jam</span>
+            <div class="bar" style="--h:50%"></div>
+            <span class="bar-name">Lansia</span>
+          </div>
+
+          <div class="bar-item">
+            <span class="bar-label">7–9 jam</span>
+            <div class="bar" style="--h:55%"></div>
+            <span class="bar-name">Dewasa</span>
+          </div>
+
+          <div class="bar-item">
+            <span class="bar-label">8–10 jam</span>
+            <div class="bar" style="--h:65%"></div>
+            <span class="bar-name">Remaja</span>
+          </div>
+
+          <div class="bar-item">
+            <span class="bar-label">9–11 jam</span>
+            <div class="bar" style="--h:80%"></div>
+            <span class="bar-name">Anak</span>
+          </div>
+
+        </div>
+
+        <div class="chart-desc">
+          <p>Lansia: ≥ 65 tahun</p>
+          <p>Dewasa: 18–64 tahun</p>
+          <p>Remaja: 14–17 tahun</p>
+          <p>Anak: 6–13 tahun</p>
+        </div>
+      </section>
+
+      <section class="calculator container fade-in">
+        <h2>Sleepcare Calculator 😴</h2>
+
+        <div class="calc-box slide-up">
+          <label>Usia:</label>
+          <input type="number" id="age" placeholder="Masukkan usia">
+
+          <label>Jam Tidur:</label>
+          <input type="time" id="sleepTime">
+
+          <label>Jam Bangun:</label>
+          <input type="time" id="wakeTime">
+
+          <button onclick="calculateSleep()">Hitung</button>
+
+          <div class="result" id="result"></div>
+        </div>
+      </section>
+
+    </section>
+
+    <section id="about" class="page">
+      <div class="container about-wrapper">
+        <h1 class="about-title">Sleep Deprivation</h1>
+
+        <div class="about-card fade-in delay-1">
+          <h2>Apa itu Sleep Deprivation?</h2>
+          <p>
+            Sleep deprivation adalah kondisi ketika seseorang tidak mendapatkan
+            waktu tidur yang cukup sesuai kebutuhan tubuh.
+          </p>
+        </div>
+
+        <div class="about-card fade-in delay-2">
+          <h2>Penyebab Sleep Deprivation</h2>
+          <ul>
+            <li>Penggunaan gadget sebelum tidur</li>
+            <li>Stres dan tekanan akademik</li>
+            <li>Pola tidur tidak teratur</li>
+            <li>Konsumsi kafein berlebih</li>
+          </ul>
+        </div>
+
+        <div class="about-card fade-in delay-3">
+          <h2>Kebutuhan Tidur Ideal</h2>
+          <div class="about-chart">
+            <div class="about-bar" style="--h:50%">Lansia</div>
+            <div class="about-bar" style="--h:55%">Dewasa</div>
+            <div class="about-bar" style="--h:65%">Remaja</div>
+            <div class="about-bar" style="--h:80%">Anak</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="effects" class="page">
+      <div class="container">
+
+        <h3 class="effects-title">Dampak Kurang Tidur</h3>
+
+        <p class="effects-desc">
+          Pilih salah satu untuk lihat penjelasan lebih lengkap 👇
+        </p>
+
+        <div class="effects-grid">
+
+          <div class="effects-card">
+            <h3 class="card-title"><i class="fa-solid fa-heart-pulse"></i> Kondisi Fisik</h3>
+            <a href="#fisik" class="detail-link">Details →</a>
+          </div>
+
+          <div class="effects-card">
+            <h3 class="card-title"><i class="fa-solid fa-brain"></i> Konsentrasi & Emosi</h3>
+            <a href="#mental" class="detail-link">Details →</a>
+          </div>
+
+          <div class="effects-card">
+            <h3 class="card-title"><i class="fa-solid fa-chart-line"></i> Aktivitas Harian</h3>
+            <a href="#aktivitas" class="detail-link">Details →</a>
+          </div>
+
+          <div class="effects-card">
+            <h3 class="card-title"><i class="fa-solid fa-triangle-exclamation"></i> Risiko Jangka Panjang</h3>
+            <a href="#risiko" class="detail-link">Details →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="fisik" class="page">
+      <div class="container detail-container">
+
+        <h3 class="detail-title">Efek Fisik 🫀</h3>
+
+        <a href="#effects" class="back-btn">← Kembali</a>
+
+        <p class="lead">
+          Kurang tidur bukan cuma bikin capek, tapi juga berdampak ke hampir seluruh sistem tubuh.
+          Saat tidur, tubuh melakukan proses pemulihan seperti memperbaiki sel, menyeimbangkan hormon,
+          dan mengembalikan energi. Kalau kurang tidur, proses ini jadi tidak optimal.
+        </p>
+
+        <div class="detail-grid">
+
+          <div class="detail-card">
+            <h3>Sistem Imun Melemah</h3>
+            <p>
+              Tubuh jadi lebih rentan terhadap penyakit seperti flu dan infeksi karena produksi sel imun menurun.
+              Bahkan, pemulihan saat sakit juga bisa jadi lebih lama.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Gangguan Metabolisme</h3>
+            <p>
+              Hormon lapar meningkat dan hormon kenyang menurun, sehingga kamu jadi lebih sering lapar
+              dan cenderung makan berlebihan, terutama makanan tinggi kalori.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Kesehatan Kulit Menurun</h3>
+            <p>
+              Produksi kolagen berkurang sehingga kulit tampak kusam, muncul mata panda,
+              dan jerawat lebih mudah muncul.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Koordinasi & Refleks Menurun</h3>
+            <p>
+              Tubuh jadi lebih lambat merespons sehingga meningkatkan risiko jatuh atau cedera saat beraktivitas.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Kelelahan Berkepanjangan</h3>
+            <p>
+              Walaupun tidak banyak aktivitas, tubuh tetap terasa lelah karena energi tidak pulih dengan baik.
+            </p>
+          </div>
+
+        </div>
+
+        <p class="mini-note">Intinya: tubuh butuh tidur buat “repair system”.</p>
+      </div>
+    </section>
+
+    <section id="mental" class="page">
+      <div class="container detail-container">
+
+        <h3 class="detail-title">Efek Mental & Kognitif 🧠</h3>
+
+        <a href="#effects" class="back-btn">← Kembali</a>
+
+        <p class="lead">
+          Otak membutuhkan tidur untuk memproses informasi dan menjaga stabilitas emosi.
+          Tanpa tidur yang cukup, performa otak akan langsung menurun.
+        </p>
+
+        <div class="detail-grid">
+
+          <div class="detail-card">
+            <h3>Konsentrasi Menurun</h3>
+            <p>
+              Fokus jadi lebih pendek sehingga belajar atau mengerjakan tugas terasa lebih lama dan sulit.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Memori Terganggu</h3>
+            <p>
+              Informasi yang dipelajari lebih sulit disimpan ke dalam memori jangka panjang.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Emosi Tidak Stabil</h3>
+            <p>
+              Lebih mudah marah, sensitif, dan overthinking terhadap hal kecil.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Pengambilan Keputusan Buruk</h3>
+            <p>
+              Otak yang lelah cenderung membuat keputusan secara impulsif.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Perhatian Mudah Buyar</h3>
+            <p>
+              Sulit mempertahankan fokus dalam waktu lama, mirip seperti gejala kurang perhatian.
+            </p>
+          </div>
+
+        </div>
+
+        <p class="mini-note">Makanya habis begadang = auto ga fokus 😵</p>
+      </div>
+    </section>
+
+    <section id="aktivitas" class="page">
+      <div class="container detail-container">
+
+        <h3 class="detail-title">Dampak Aktivitas Harian 📉</h3>
+
+        <a href="#effects" class="back-btn">← Kembali</a>
+
+        <p class="lead">
+          Kurang tidur bukan cuma soal capek, tapi juga bikin semua aktivitas jadi lebih berat.
+          Hal-hal yang biasanya mudah dilakukan jadi terasa lebih lama dan kurang maksimal.
+        </p>
+
+        <div class="detail-grid">
+
+          <div class="detail-card">
+            <h3>Produktivitas Menurun</h3>
+            <p>
+              Tugas yang biasanya cepat selesai bisa jadi 2x lebih lama karena fokus dan energi berkurang.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Konsentrasi Pendek</h3>
+            <p>
+              Waktu fokus menurun drastis. Dari sekitar 45 menit bisa turun jadi hanya 10–15 menit.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Kreativitas Berkurang</h3>
+            <p>
+              Otak sulit berpikir fleksibel, jadi ide-ide baru lebih susah muncul.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Rutinitas Berantakan</h3>
+            <p>
+              Lebih sering telat bangun, telat sekolah, dan kehilangan ritme harian.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="detail-box">
+          <b>Perbandingan:</b>
+          <ul class="no-bullet">
+            <li>Normal → fokus ±45 menit</li>
+            <li>Kurang tidur → fokus ±15 menit</li>
+          </ul>
+        </div>
+
+        <p class="mini-note">Kurang tidur = effort naik, hasil turun 😵</p>
+      </div>
+    </section>
+
+    <section id="risiko" class="page">
+      <div class="container detail-container">
+
+        <h3 class="detail-title">Risiko Jangka Panjang ⚠️</h3>
+
+        <a href="#effects" class="back-btn">← Kembali</a>
+
+        <p class="lead">
+          Kalau kurang tidur terjadi terus-menerus, dampaknya bisa serius
+          dan memengaruhi kesehatan jangka panjang.
+        </p>
+
+        <div class="detail-grid">
+
+          <div class="detail-card">
+            <h3>Penyakit Jantung</h3>
+            <p>
+              Kurang tidur dapat meningkatkan tekanan darah dan risiko penyakit kardiovaskular.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Gangguan Gula Darah</h3>
+            <p>
+              Sensitivitas insulin menurun sehingga meningkatkan risiko diabetes.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Masalah Mental</h3>
+            <p>
+              Risiko stres, kecemasan, hingga depresi meningkat jika tidur tidak cukup.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Risiko Cedera</h3>
+            <p>
+              Mengantuk meningkatkan kemungkinan kecelakaan saat beraktivitas.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <h3>Sistem Imun Lemah</h3>
+            <p>
+              Tubuh jadi lebih mudah sakit dalam jangka panjang.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="rekomendasi">
+          <b>Rekomendasi:</b>
+          <ul class="no-bullet">
+            <li>Tidur di jam yang sama setiap hari</li>
+            <li>Hindari gadget sebelum tidur</li>
+            <li>Ciptakan kamar yang nyaman</li>
+          </ul>
+        </div>
+
+        <p class="mini-note">Jangan tunggu parah baru sadar ⚠️</p>
+      </div>
+    </section>
+
+    <section id="tips" class="page">
+      <div class="container tips-container">
+        <h2>Tips Tidur Berkualitas</h2>
+
+        <div class="tips-wrapper">
+          <div class="tip-box fade-in delay-1">
+            <h3><span>Jaga Konsistensi</span> Waktu Tidur</h3>
+            <p>
+              Tidur dan bangun di waktu yang sama setiap hari membantu tubuh
+              punya ritme yang stabil dan bikin tidur lebih nyenyak.
+            </p>
+          </div>
+
+          <div class="tip-box fade-in delay-2">
+            <h3><span>Batasi</span> Penggunaan Gadget</h3>
+            <p>
+              Cahaya dari layar bisa membuat mata tetap aktif dan
+              bikin kamu lebih sulit merasa mengantuk.
+            </p>
+          </div>
+
+          <div class="tip-box fade-in delay-3">
+            <h3><span>Kurangi</span> Kafein</h3>
+            <p>
+              Minuman seperti kopi dan teh bisa membuat tubuh tetap terjaga
+              lebih lama, terutama jika diminum di malam hari.
+            </p>
+          </div>
+
+          <div class="tip-box fade-in delay-4">
+            <h3><span>Ciptakan</span> Suasana Nyaman</span></h3>
+            <p>
+              Ruangan yang gelap, tenang, dan sejuk membantu tubuh lebih cepat
+              masuk ke fase tidur.
+            </p>
+          </div>
+
+          <div class="tip-box fade-in delay-4">
+
+            <h3><span>Pilih</span> Kebutuhan Tidur Berdasarkan Usia</h3>
+
+            <b>Klik kategori usia untuk melihat kebutuhan tidur yang ideal:</p><br>
+              <b><span>👶 Anak (6–12 tahun): 9–11 jam</span></b>
+              <p>Penting untuk pertumbuhan, daya ingat, dan fokus belajar.</p><br>
+              <b><span>🧑 Remaja (13–18 tahun): 8–10 jam</span></b>
+              <p>Kurang tidur bisa bikin stres dan menurunkan konsentrasi.</p><br>
+              <b><span>👨 Dewasa (18–64 tahun): 7–9 jam</span></b>
+              <p>Membantu produktivitas dan memperbaiki sel tubuh.</p><br>
+              <b><span>👴 Lansia (65+ tahun): 7–8 jam</span></b>
+              <p>Penting untuk menjaga kesehatan otak dan kualitas hidup.</p><br>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="page">
+      <div class="container contact-container fade-in">
+        <h2>Contact Us</h2>
+        <p>Hubungi kami melalui sosial media berikut:</p>
+
+        <div class="contact-links slide-up delay-1">
+          <a href="https://wa.me/6281575014116" class="contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+
+          <a href="https://instagram.com/shifaap02_" class="contact-item">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+
+          <a href="https://x.com/itshenara" class="contact-item">
+            <i class="fa-brands fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-container">
+
+      <div class="footer-section">
+        <h3>🌙 SleepCare</h3>
+
+        <p class="footer-desc">
+          Website edukasi tentang pentingnya tidur yang cukup.
+        </p>
+
+        <p class="warning-text">
+          ⚠️ Website ini hanya dibuat sebagai media edukasi dan informasi umum.
+          Informasi yang disajikan tidak dimaksudkan sebagai pengganti saran medis profesional.
+          Untuk diagnosis dan penanganan yang lebih akurat, disarankan untuk berkonsultasi dengan ahli kesehatan.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://instagram.com/shifaap02_" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/itshenara" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 SleepCare</p>
+    </div>
+  </footer>
+
+  <section id="faq" class="page">
+    <div class="container faq-container">
+
+      <h2>FAQ (Frequently Asked Questions)</h2>
+
+      <div class="faq-item">
+        <h3>Apa itu sleep deprivation?</h3>
+        <p>Sleep deprivation adalah kondisi ketika seseorang tidak mendapatkan tidur yang cukup sesuai kebutuhan tubuh.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Berapa lama waktu tidur yang ideal?</h3>
+        <p>Umumnya, remaja dan dewasa membutuhkan sekitar 7–9 jam tidur setiap malam.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Apa dampak kurang tidur?</h3>
+        <p>Kurang tidur bisa menyebabkan kelelahan, sulit fokus, emosi tidak stabil, hingga gangguan kesehatan jangka
+          panjang.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Bagaimana cara memperbaiki pola tidur?</h3>
+        <p>Mulai dengan tidur teratur, mengurangi gadget sebelum tidur, dan menciptakan suasana tidur yang nyaman.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="privacy" class="page">
+    <div class="container faq-container">
+
+      <h2>Privacy Policy</h2>
+
+      <div class="faq-item">
+        <h3>Privasi Pengguna</h3>
+        <p>
+          Website ini tidak mengumpulkan data pribadi pengguna secara aktif.
+          Semua konten hanya bertujuan sebagai media edukasi.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Informasi yang Dikumpulkan</h3>
+        <p>
+          Data non-pribadi seperti kunjungan halaman mungkin tercatat secara otomatis
+          untuk keperluan analisis sederhana.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Penggunaan Informasi</h3>
+        <p>
+          Informasi yang tersedia tidak digunakan untuk tujuan komersial
+          dan tidak menggantikan saran profesional.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Catatan Penting</h3>
+        <p>
+          Pengguna disarankan untuk tidak membagikan data sensitif saat menggunakan website ini.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="terms" class="page">
+    <div class="container">
+
+      <h2>Terms & Conditions</h2>
+
+      <div class="faq-item">
+        <h3>Penggunaan Website</h3>
+        <p>
+          Website ini dibuat untuk tujuan edukasi mengenai pentingnya tidur yang cukup.
+          Pengguna diharapkan menggunakan informasi dengan bijak.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Batasan Tanggung Jawab</h3>
+        <p>
+          Informasi yang disajikan tidak menggantikan saran medis profesional.
+          Segala keputusan yang diambil berdasarkan konten website menjadi tanggung jawab pengguna.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Perubahan Konten</h3>
+        <p>
+          Kami berhak memperbarui atau mengubah isi website kapan saja tanpa pemberitahuan sebelumnya.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
